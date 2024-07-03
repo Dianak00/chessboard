@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+          /*  background-color: #bcb5b2;*/
+
+        }
+       
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .black {
+            background-color: #565656;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .white {
+            background-color: 	#fbf5de;
+            width: 50px;
+            height: 50px;
+            text-align: center; 
+            cursor: pointer;   
+        }
+        td:hover {
+            background-color: #fff;
+        }
+        
+        table td .piece {
+            font-size: 20px;
+        }
+       .tooltip {
+            position: relative;
+            font-size: 15px;
+            font-weight: bold;       
+        }
+        .tooltiptext {
+            position: absolute;
+            right: 50%;
+            top: 0;
+            transform: translateX(-100%);
+            background-color: #000000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 1px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border: 1px solid white;
+        }
+        .bgwhite {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid black;
+        }
+        .tooltiptext::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-100%);
+            border: 5px solid;
+            border-color: #000 #0000 #0000 #0000;
+            
+        }
+        .tooltip:hover .tooltiptext {
+            top:-50%;
+            right: -30%;
+            visibility: visible;
+            opacity: 1;
+        }
+        table {
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+        
+       
+    </style>
+</head>
+<body>
+<h1>Descopera figurile de sah</h1>
+<div class="container">
+    <table class="">
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+        </tr>
+        <tr>
+            <th>8</th>
+                <td class="black tooltip cborder"><span class="piece whiteturn">&#9814;</span><span class="tooltiptext bgwhite turn">Turn</span></td>
+                <td class="white tooltip cborder"><span class="piece whitecal">&#9816;</span><span class="tooltiptext bgwhite cal">Cal</span></td>
+                <td class="black tooltip cborder"><span class="piece whitenebun">&#9815;</span><span class="tooltiptext bgwhite nebun">Nebun</span></td>
+                <td class="white tooltip cborder"><span class="piece whitedama">&#9813;</span><span class="tooltiptext bgwhite" id="regina">Regina</span></td>
+                <td class="black tooltip cborder"><span class="piece whiterege">&#9812;</span><span class="tooltiptext bgwhite" id="rege">Rege</span></td>
+                <td class="white tooltip cborder"><span class="piece whitenebun">&#9815;</span><span class="tooltiptext bgwhite nebun">Nebun</span></td>
+                <td class="black tooltip cborder"><span class="piece whitecal">&#9816;</span><span class="tooltiptext bgwhite cal">Cal</span></td>
+                <td class="white tooltip cborder"><span class="piece whiteturn">&#9814;</span><span class="tooltiptext bgwhite turn">Turn</span></td>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td class="white tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="black tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="white tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="black tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="white tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="black tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="white tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <td class="black tooltip"><span class="piece whitepion">&#9817;</span><span class="tooltiptext bgwhite">Pion</span></td>
+            <th>7</th>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <th>6</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <th>5</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <th>4</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <th>3</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td class="black tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="white tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="black tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="white tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="black tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="white tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="black tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <td class="white tooltip"><span class="piece blackpion">&#9823;</span><span class="tooltiptext">Pion</span></td>
+            <th>2</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <span id="borderc">
+            <td class="white tooltip"><span class="piece blackturn">&#9820;</span><span class="tooltiptext">Turn</span></td>
+            <td class="black tooltip"><span class="piece blackcal">&#9822;</span><span class="tooltiptext">Cal</span></td>
+            <td class="white tooltip"><span class="piece blacknebun">&#9821;</span><span class="tooltiptext">Nebun</span></td>
+            <td class="black tooltip"><span class="piece blackdama">&#9819;</span><span class="tooltiptext">Regina</span></td>
+            <td class="white tooltip"><span class="piece blackrege">&#9818;</span><span class="tooltiptext">Rege</span></td>
+            <td class="black tooltip"><span class="piece blacknebun">&#9821;</span><span class="tooltiptext">Nebun</span></td>
+            <td class="white tooltip"><span class="piece blackcal">&#9822;</span><span class="tooltiptext">Cal</span></td>
+            <td class="black tooltip"><span class="piece blackturn">&#9820;</span><span class="tooltiptext">Turn</span></td>
+        </span>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
